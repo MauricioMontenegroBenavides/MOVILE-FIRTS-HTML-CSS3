@@ -1,0 +1,627 @@
+/*
+**AL agregar estilos se acomodan EN ORDEN POR SUGERENCIA:
+1. POSICIONAMINETO (estilos relacionados al posiscionamiento)
+2. MOdelo de caja 
+3. tipografia (fuentes tamaño de fuente)
+4 .Todo lo que tenga que ver con visuales 
+5 .Miscealanias u otros 
+*/
+
+/*la ventaja de svg es que es mejor porque no se pixela */
+:root{
+    --bitcoint:#F7931A;
+    --softOrange:#FFE9D5;
+    --secondary-blue:#1A9AF7;
+    --soft-blue:#E7F5FF;
+    --warn-black: #201E1C;
+    --black: #282623;
+    --grey: #BABABA;
+    --white: #FAF8F7;
+    --j-white: #FFFFFF;
+    --plomo: #757575;
+    --white-off:#E5E5E5; 
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;/*Es para trabajar con el rem*/
+    font-family:'DM Sans','sans-seri';/*Estos valores se los toma del google-fonts*/
+}
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 100%;
+    min-width:320px;/*esto quiere decir que el width no se va hacer mas chico que los 320px q es el tamaño del cell*/
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);/*Usar color difuminado se lo hace con linear-gradeint*/
+    
+}
+
+header img{
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center;/*Forma de centrar a un elemento que tenga a un contenedor con display-flex*/
+
+}
+
+.header__title-contener{
+  
+    width: 90%;
+    min-width:288px;
+    max-width: 900px;
+    margin-top: 50px;  
+    text-align: center;
+    align-self: center; /*Esto se utiliza porque se usa display flex*/ 
+}
+
+.header__title-contener h1{
+   
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;/*Indica la separacion entre lineas*/
+    color: var(--j-white);
+}
+
+.header__title-contener p{
+   
+    margin-top: 25px;
+    font-weight: 500; /*grueso de la fuente */
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--softOrange);
+}
+
+.header__title-contener .header__button{
+
+    position: absolute;
+    left: calc(50% - 118px);
+    top:270px;
+    display: block;
+    margin-top: 45px;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color:var(--white);
+    /*SOMBRAS*/
+    box-shadow: 0px 4px 8px rgba(89,73,30,0.16);
+    border: none;/*Esto se pone por un acaso haya un border definido*/
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    
+}
+
+.header__button span{
+
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url('./assets/iconos/Vector\ \(2\).svg');
+}
+
+main{
+
+    width: 100%;
+    height: auto;/*Hay q poner la altura con un valor regulable*/
+    background-color:var(--white)
+}
+
+.section1{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    min-width:320px;
+}
+
+.section1 img{
+
+    width: 19.5rem;
+    height: 19.5rem;
+    margin-top: 6rem;
+    align-self: center;
+    /* background-image: url('./assets/imagenes/bitcoin.svg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;/*EVITA QUE LA IMAGEN SE REPITA*/ 
+}
+
+.section1 .section1__title{
+
+    width: 90%;
+    min-width:288px;
+    max-width: 900px;
+    text-align: center;
+    align-self: center;
+    margin-top: 50px;  
+    margin:0 auto;/*se alinea en le centro */
+}
+
+.section1 .section1__title h2{
+
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    text-align: center;
+    color: var(--warn-black);
+    margin-top: 40px;
+}
+
+.section1 .section1__title p{
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    text-align: center;
+    color: var(--plomo);
+    margin-top: 20px;
+}
+
+/*SECCION UNO*/
+
+.main-table {
+   
+    width: 90%;
+    min-width: 235px;
+    max-width: 500px;
+    height:auto;
+    margin: 0 auto;
+    font-family: "Inter",sans-serif;
+    margin-top: 30px;
+    
+    
+}
+
+.main-table .section__table1 {
+
+ 
+   width: 70%;
+   max-width: 200px;
+   margin: 0 auto;
+   margin-bottom: 30px;
+   
+}
+
+.main-table .table1{
+     
+     margin:0 auto;
+     width: 100%;
+     max-width: 200px;
+     height: 100%;
+     margin-bottom: 30px;
+
+     
+}
+
+.main-table .table1 td{
+   
+   width:50%;
+   padding: 5px;
+   font-size: 1.6rem;
+   font-weight: 500;
+   line-height: 1.9rem;
+   color:var(--grey);
+   background-color:var( --j-white);
+   
+}
+
+
+.main-table .section__table1 .table-title1 {
+
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcoint);
+
+}
+
+.table1 .table__top-left{
+
+    border-radius: 10px;
+}
+ 
+.table1 .table-rigth{
+
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.main-table .section__table1 .table1 .down{
+    display:inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url('./assets/iconos/trending-up.svg');
+}
+
+/*SECCION DOS*/
+
+.product{
+
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    max-height: 910px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #201E1C;
+    justify-content: center;
+}
+
+.product .papa{
+       background-image: url('./assets/imagenes/group18.svg');
+       width: 40px;
+       height: 40px;
+       background-size: cover;
+       background-position: center; 
+       background-repeat: no-repeat;/*EVITA QUE LA IMAGEN SE REPITA*/ 
+       position:absolute;
+       left: calc(50% - 3px);
+       top:-10px
+}
+
+.product-container{
+
+        width: 50%;
+        min-width: 288px;
+        height: auto;
+        align-self: center;
+        margin-top: 50px;
+        text-align: center;
+}
+
+.product-container h2 {
+
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 30px;
+    
+}
+
+.product-container p {
+
+    
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #808080;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.product .product-target {
+
+    background-color: #282623;
+    width: 80%;
+    max-width: 700px;
+    height:152px;
+    text-align: center;
+    align-self: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    margin-bottom: 20px;
+   
+}
+
+.product .product-target h2{
+
+    width:217px;
+    height: 18px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-top: 30px;
+    text-align:left;
+    margin-left: 10px;
+}
+
+.product .product-target p{
+    
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #808080;
+    text-align:left;
+    margin-left: 10px;
+    margin-bottom: 50px;
+   
+}
+
+.product .product-target .logo1{
+   
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background-image: url('./assets/iconos/clock.svg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+   
+}
+
+.product .product-target .logo2{
+   
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+/*SECCION 3*/
+.bitcoint{
+    position: relative;
+    width: 100%;
+    min-width:320px;
+    height: 50vh;
+    background-image: url('./assets/imagenes/bitcoinbaby\ 1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bitcoint h2{
+
+    width: 100%;
+    height: 26px;
+    padding-top: 60px;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    align-self: center;
+   
+}
+
+/*SECCION 4*/
+
+.section4{
+
+    background-color: #E5E5E5;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:20px ;
+}
+
+.section4 .section4-titulo4{
+
+    width: 90%;
+    min-width:288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.section4 .section4-titulo4 h2{
+  
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: #201E1C;
+}
+
+/* .planes-container{
+
+    display: flex;
+    height: 316px;
+    scroll-snap-type:x proximity;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-align: center;
+}
+*/
+
+.section4 .section4-titulo4 p{
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #757575;
+    margin-top: 10px;
+}
+
+.section4-container{
+  
+    width: 190px;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto; 
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 8px;  
+    margin-top: 25px; 
+    position: relative; 
+}
+
+.section4-container .section4-container-titulo{
+
+    position: absolute;
+    top: -10px;
+    background-color: #F7931A;
+    border-radius: 8px;
+    align-self: center;
+    left: calc(50% - 45px);
+    padding: 5px;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.section4-container .section4-container-article4-container h3 {
+   
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #000000;
+    text-align: center;
+    padding-top: 40px;
+   
+   
+}
+
+.section4-container .section4-container-article4-container .parrafo1 {
+
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 6.3rem;
+    letter-spacing: -0.08em;
+    color: #000000;
+    text-align: center;
+    position: relative;
+}
+
+
+.section4-container .section4-container-article4-container .parrafo1 span {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #363636;
+    position: absolute;
+    bottom: 35px;
+    left: calc(50% - 40px);
+
+}
+
+.section4-container .section4-container-article4-container .parrafo2 {
+
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #757575;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.section4-container .section4-container-article4-container button {
+  
+    width: 150px;
+    height: 48px; 
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    font-family:'DM Sans','sans-seri';
+    margin-bottom: 10px;
+    background-color: #FAF8F7;
+    border: 2px solid #F7931A;
+    border-radius: 4px;
+    margin-top: 25px;
+   
+}
+
+.section4-container .section4-container-article4-container button span{
+
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url('./assets/iconos/Vector.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:auto;
+    
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    height:150px;
+    background: #F7931A;
+    list-style: none;
+}
+
+footer .sectionf1{
+   width: 50%;
+   max-width: 900px;
+   margin-top: 40px;
+   margin-left: 70px;
+   align-items: center;
+   justify-content: center;
+}
+
+footer .sectionf1 ul {
+
+    list-style: none;
+}
+
+footer .sectionf1 a {
+  
+    text-decoration: none;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+footer .sectionf2{
+    width: 30%;
+    margin-top: 40px;
+    margin-left: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
